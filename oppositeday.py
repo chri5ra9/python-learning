@@ -1,4 +1,4 @@
-today_is_opposite_day = False
+today_is_opposite_day = True
 
 # Set say_it_is_opposite_day based on today_is_opposite_day:
 if today_is_opposite_day == True:
