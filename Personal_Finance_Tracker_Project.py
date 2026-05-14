@@ -33,7 +33,16 @@ while True:
             print("Description cannot be blank")
             continue
 
-        amount = float(input("Enter expense amount: "))
+        amount_input = input("Enter expense amount: ")
+        if not amount_input:
+            print("Amount cannot be blank")
+            continue
+
+        try:
+            amount = float(amount_input)
+        except ValueError:
+            print("Invalid amount — please enter a number")
+            continue
 
         if amount <= 0:
             print("Amount must be greater than zero")
