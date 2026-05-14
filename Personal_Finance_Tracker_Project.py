@@ -3,7 +3,20 @@
 import random
 import sys
 
-income = float(input("Enter your monthly income: "))
+while True:
+    income_input = input("Enter your monthly income: ")
+    if income_input.lower() == "back":
+        print("Nothing to go back to — please enter your income")
+    else:
+        try:
+            income = float(income_input)
+            if income <= 0:
+                print("Income must be greater than zero")
+            else:
+                break
+        except ValueError:
+            print("Invalid amount — please enter a number")
+
 total_spent = 0
 total_essential = 0
 total_non_essential = 0
@@ -27,38 +40,63 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        description = input("Enter expense description: ")
+        cancelled = False
 
-        if not description:
-            print("Description cannot be blank")
+        # description input
+        while True:
+            description = input("Enter expense description (or type 'back' to cancel): ")
+            if description.lower() == "back":
+                cancelled = True
+                break
+            if not description:
+                print("Description cannot be blank")
+            else:
+                break
+
+        if cancelled:
+            print("Expense cancelled — returning to menu")
             continue
 
-        amount_input = input("Enter expense amount: ")
-        if not amount_input:
-            print("Amount cannot be blank")
+        # amount input
+        while True:
+            amount_input = input("Enter expense amount (or type 'back' to cancel): ")
+            if amount_input.lower() == "back":
+                cancelled = True
+                break
+            try:
+                amount = float(amount_input)
+                if amount <= 0:
+                    print("Amount must be greater than zero")
+                else:
+                    break
+            except ValueError:
+                print("Invalid amount — please enter a number")
+
+        if cancelled:
+            print("Expense cancelled — returning to menu")
             continue
 
-        try:
-            amount = float(amount_input)
-        except ValueError:
-            print("Invalid amount — please enter a number")
+        # category input
+        while True:
+            category = input("Is this essential or non-essential? (e/n or type 'back' to cancel): ")
+            if category.lower() == "back":
+                cancelled = True
+                break
+            if category == "e" or category == "n":
+                break
+            print("Please enter e or n")
+
+        if cancelled:
+            print("Expense cancelled — returning to menu")
             continue
 
-        if amount <= 0:
-            print("Amount must be greater than zero")
-            continue
-
-        category = input("Is this essential or non-essential? (e/n): ")
-
+        # save the expense
         if category == "e":
             total_essential = total_essential + amount
             print("Added as essential expense: " + description)
         elif category == "n":
             total_non_essential = total_non_essential + amount
             print("Added as non-essential expense: " + description)
-        else:
-            print("Invalid category — expense not added")
-            continue
 
         total_spent = total_spent + amount
 
