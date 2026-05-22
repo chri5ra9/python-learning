@@ -1,9 +1,15 @@
-def say_hello_to(name):
-    print('Good morning, ' + name)
-    print('Good afternoon, ' + name)
-    print('Good evening, ' + name)
+def spam():
+    eggs = 'spam local'
+    print(eggs)  # Prints 'spam local'
 
-say_hello_to('Alice')
-say_hello_to('Bob')  
+def bacon():
+    eggs = 'bacon local'
+    print(eggs)  # Prints 'bacon local'
+    spam()
+    print(eggs)  # Prints 'bacon local'
+
+eggs = 'global'
+bacon()
+print(eggs)  # Prints 'global'
 
 

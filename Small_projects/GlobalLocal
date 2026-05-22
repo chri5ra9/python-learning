@@ -1,0 +1,8 @@
+
+def example1():
+    
+    print(z)
+    z = 10
+
+example1()
+
