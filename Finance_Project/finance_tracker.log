@@ -1,0 +1,41 @@
+2026-05-26 19:32:50,438 - INFO - Program started
+2026-05-26 19:32:50,438 - DEBUG - get_income() called
+2026-05-26 19:33:19,678 - INFO - Income set to: 1500.0
+2026-05-26 19:33:19,678 - DEBUG - print_menu() called
+2026-05-26 19:33:22,399 - DEBUG - User selected menu option: 1
+2026-05-26 19:33:22,400 - INFO - User started adding an expense
+2026-05-26 19:33:22,400 - DEBUG - get_description() called
+2026-05-26 19:33:26,038 - DEBUG - Description entered: Rent
+2026-05-26 19:33:26,038 - DEBUG - get_amount() called
+2026-05-26 19:33:27,949 - DEBUG - Amount entered: 1500.0
+2026-05-26 19:33:27,949 - DEBUG - get_category() called
+2026-05-26 19:33:30,058 - DEBUG - Category entered: e
+2026-05-26 19:33:30,058 - INFO - Expense saved — description: Rent amount: 1500.0 category: e total_spent: 1500.0
+2026-05-26 19:33:30,058 - DEBUG - print_menu() called
+2026-05-26 19:33:32,571 - DEBUG - User selected menu option: 2
+2026-05-26 19:33:32,571 - INFO - User viewed summary
+2026-05-26 19:33:32,571 - DEBUG - print_menu() called
+2026-05-26 19:33:37,091 - DEBUG - User selected menu option: 
+2026-05-26 19:33:37,091 - WARNING - Invalid menu option entered: 
+2026-05-26 19:33:37,091 - DEBUG - print_menu() called
+2026-05-26 19:33:37,451 - DEBUG - User selected menu option: 
+2026-05-26 19:33:37,451 - WARNING - Invalid menu option entered: 
+2026-05-26 19:33:37,451 - DEBUG - print_menu() called
+2026-05-26 19:33:38,770 - DEBUG - User selected menu option: 1
+2026-05-26 19:33:38,770 - INFO - User started adding an expense
+2026-05-26 19:33:38,770 - DEBUG - get_description() called
+2026-05-26 19:33:39,132 - WARNING - User submitted blank description
+2026-05-26 19:33:42,364 - DEBUG - Description entered: food
+2026-05-26 19:33:42,364 - DEBUG - get_amount() called
+2026-05-26 19:33:42,957 - ERROR - Non-numeric amount entered: 
+2026-05-26 19:33:43,273 - ERROR - Non-numeric amount entered: 
+2026-05-26 19:33:46,210 - DEBUG - Amount entered: 400.0
+2026-05-26 19:33:46,210 - DEBUG - get_category() called
+2026-05-26 19:33:48,227 - DEBUG - Category entered: e
+2026-05-26 19:33:48,227 - INFO - Expense saved — description: food amount: 400.0 category: e total_spent: 1900.0
+2026-05-26 19:33:48,227 - DEBUG - print_menu() called
+2026-05-26 19:33:50,366 - DEBUG - User selected menu option: 2
+2026-05-26 19:33:50,366 - INFO - User viewed summary
+2026-05-26 19:33:50,367 - DEBUG - print_menu() called
+2026-05-26 19:33:55,180 - DEBUG - User selected menu option: 3
+2026-05-26 19:33:55,181 - INFO - Program exited by user
