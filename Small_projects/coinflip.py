@@ -1,7 +1,8 @@
 import random
-for i in range(100): #preform 100 coin flip
-    if random.randint(0,1) == 0:
-        print('H', end=' ')
-    else:
-        print('T', end=' ')
-print()
+heads = 0
+for i in range(1, 1001):
+   if random.randint(0, 1) == 1:
+        heads = heads + 1
+   if i == 500:
+      print('Halfway done!')
+print('Heads came up ' + str(heads) + ' times.')
